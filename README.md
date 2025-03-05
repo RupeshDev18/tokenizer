@@ -13,7 +13,7 @@ This repository explains and implements various tokenization techniques used in 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/rupeshdev18/tokenization-repo.git
+   git clone https://github.com/rupeshdev18/tokenizer.git
    cd tokenization-repo
    ```
    2. Install dependencies:
