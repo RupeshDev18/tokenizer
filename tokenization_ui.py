@@ -1,7 +1,7 @@
 import streamlit as st
 from transformers import AutoTokenizer
 import tiktoken
-from sentencepiece import SentencePieceProcessor
+# from sentencepiece import SentencePieceProcessor
 
 # Custom Styling
 st.markdown("""
@@ -47,7 +47,7 @@ st.write("This tool demonstrates different tokenization methods used in NLP and 
 # Dropdown for tokenization methods
 tokenization_method = st.selectbox(
     "Select a Tokenization Method:",
-    ["Byte-Pair Encoding (BPE)", "WordPiece", "Unigram LM"]
+    ["Byte-Pair Encoding (BPE)", "WordPiece"]
 )
 
 # Input text area
@@ -67,11 +67,11 @@ if text.strip():  # Ensure non-empty input
         tokens = tokenizer.tokenize(text)
         token_ids = tokenizer.convert_tokens_to_ids(tokens)
         
-    elif tokenization_method == "Unigram LM":
-        sp = SentencePieceProcessor()
-        sp.load("spiece.model")  # Ensure model file exists
-        tokens = sp.encode_as_pieces(text)
-        token_ids = sp.encode_as_ids(text)
+    # elif tokenization_method == "Unigram LM":
+    #     sp = SentencePieceProcessor()
+    #     sp.load("spiece.model")  # Ensure model file exists
+    #     tokens = sp.encode_as_pieces(text)
+    #     token_ids = sp.encode_as_ids(text)
 
     # Display tokens & IDs in two columns
     st.subheader("🔹 Tokenization Results")
