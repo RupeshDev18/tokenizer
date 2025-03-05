@@ -1,0 +1,5 @@
+streamlit
+nltk
+transformers
+tiktoken
+# sentencepiece
