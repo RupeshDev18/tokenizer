@@ -13,14 +13,23 @@ This repository explains and implements various tokenization techniques used in 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/tokenization-repo.git
+   git clone https://github.com/rupeshdev18/tokenization-repo.git
    cd tokenization-repo
    ```
    2. Install dependencies:
 
-      ```
-      bash
+      On Linux/macOS:
+
+      ```sudo
+      sudo apt-get install build-essential cmake
       pip install -r requirements.txt
+      ```
+      On Windows (if facing issues with sentencepiece):
+
+      ```bash
+      choco install cmake
+      pip install -r requirements.txt
+
       ```
    3. Run the streamlit app:
 
